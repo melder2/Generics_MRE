@@ -4,7 +4,7 @@ import org.w3c.dom.Node;
 
 /**
  * This class models a Node object which contains different objects. Each
- * node has its internal data (a T) and pointers to the next 
+ * node has its internal data (any object) and pointers to the next 
  * node in the list.
  * 
  * @author rkelley/njohnson
@@ -28,7 +28,7 @@ public class GenericNode<T> {
 	}//end empty-argument constructor
 	
 	/**
-	 * This method sets the data of the object.
+	 * This method sets the data of any specified object.
 	 * @param data
 	 */
 	public void setData(T data) {
@@ -36,7 +36,7 @@ public class GenericNode<T> {
 	}//end setData
 	
 	/**
-	 * This method returns the data of the object.
+	 * This method returns the data of any specified object.
 	 * @return String (data)
 	 */
 	public T getData() {
@@ -67,6 +67,5 @@ public class GenericNode<T> {
 	public Node getNextNode() {
 		return nextNode;
 	}//end getNextNode
-	
 }//end class
 

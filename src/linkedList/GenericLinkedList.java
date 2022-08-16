@@ -10,10 +10,10 @@ import org.w3c.dom.Node;
  * Programming Project 1 Start Project
  * CS131ON
  */
-public class GenericLinkedList {
+public class GenericLinkedList<T> {
 
-	private Node head; //node to represent the head of the list
-	private Node tail; //node to represent the tail (end) of the list
+	private T head; //node to represent the head of the list
+	private T tail; //node to represent the tail (end) of the list
 	private int length; //variable to keep track of the number of elements in the list
 	
 	/**
@@ -28,7 +28,7 @@ public class GenericLinkedList {
 	}//end empty-argument constructor
 	
 	/**
-	 * Method to see if there are any elements in the list.
+	 * Method to see if there are any objects in the list.
 	 * @return boolean true/false
 	 */
 	public boolean isEmpty()
@@ -42,13 +42,13 @@ public class GenericLinkedList {
 	 * you can traverse the entire by following node links.
 	 * @return
 	 */
-	public Node getList()
+	public T getList()
 	{
 		return head;
 	}//end getList
 	
 	/**
-	 * This method adds a new node to the list. It first checks to see
+	 * This method adds a new node to the list which can be any object. It first checks to see
 	 * if the list is empty. If so, it sets the head and the tail nodes
 	 * to the node passed in. If the list is not empty it places the node
 	 * at the end of the list and updates the pointers in the tail. This
@@ -56,19 +56,16 @@ public class GenericLinkedList {
 	 * of the list.
 	 * @param aNode
 	 */
-	public void addNode(Node aNode)
+	public void addNode(T aNode)
 	{
 		if (isEmpty() ) {
 			head = aNode;
 			tail=head;
 			return;
 		}
-		
 		tail.setNextNode(aNode);
 		tail=tail.getNextNode();
 		tail.setNextNode(null);
 		length++;
-		
 	}//end addNode
-
 }//end class

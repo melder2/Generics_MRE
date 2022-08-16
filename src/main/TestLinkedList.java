@@ -1,5 +1,10 @@
 package main;
 import linkedList.GenericNode;
+
+import java.util.LinkedList;
+
+import org.w3c.dom.Node;
+
 import linkedList.GenericLinkedList;
 public class TestLinkedList {
 
