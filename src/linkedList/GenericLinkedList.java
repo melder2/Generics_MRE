@@ -1,7 +1,5 @@
 package linkedList;
 
-import org.w3c.dom.Node;
-
 /**
  * This class models a linked list in which each node has a pointer
  * to the node after it, except the tail which does not have a node after.
@@ -12,8 +10,8 @@ import org.w3c.dom.Node;
  */
 public class GenericLinkedList<T> {
 
-	private T head; //node to represent the head of the list
-	private T tail; //node to represent the tail (end) of the list
+	private GenericNode<T> head; //node to represent the head of the list
+	private GenericNode<T> tail; //node to represent the tail (end) of the list
 	private int length; //variable to keep track of the number of elements in the list
 	
 	/**
@@ -42,7 +40,7 @@ public class GenericLinkedList<T> {
 	 * you can traverse the entire by following node links.
 	 * @return
 	 */
-	public T getList()
+	public GenericNode<T> getList()
 	{
 		return head;
 	}//end getList
@@ -56,7 +54,7 @@ public class GenericLinkedList<T> {
 	 * of the list.
 	 * @param aNode
 	 */
-	public void addNode(T aNode)
+	public void addNode(GenericNode<T> aNode)
 	{
 		if (isEmpty() ) {
 			head = aNode;

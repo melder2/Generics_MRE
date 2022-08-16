@@ -15,7 +15,7 @@ import org.w3c.dom.Node;
 public class GenericNode<T> {
 	
 	private T data;  //data that the object stores which can be any type of object
-	private Node nextNode; //pointer to the nextNode that will be in LinkedList
+	private GenericNode<T> nextNode; //pointer to the nextNode that will be in LinkedList
 	
 	/**
 	 * Constructor build Node object. Initializes nextNode and data
@@ -55,7 +55,7 @@ public class GenericNode<T> {
 	 * This method updates the pointer for the next node.
 	 * @param nextNode
 	 */
-	public void setNextNode(Node nextNode)
+	public void setNextNode(GenericNode<T> nextNode)
 	{
 		this.nextNode=nextNode;
 	}//end setNextNode
@@ -64,7 +64,7 @@ public class GenericNode<T> {
 	 * This method returns the node stored in the next node pointer.
 	 * @return Node object
 	 */
-	public Node getNextNode() {
+	public GenericNode<T> getNextNode() {
 		return nextNode;
 	}//end getNextNode
 }//end class
